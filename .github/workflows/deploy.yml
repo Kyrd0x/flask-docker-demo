@@ -37,4 +37,4 @@ jobs:
 
             # Création et exécution du nouveau container
             docker build -t flask-demo-img .
-            docker run -d --name flask-demo-app -p 80:5000 flask-demo-img
+            docker run -d --name flask-demo-app -p 8080:5000 flask-demo-img
