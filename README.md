@@ -6,8 +6,6 @@
 
 ![app](imgs/app.png)  
 
-**Ceci est un exemple très basique de l'écosystème Docker/Flask/Github**
-
 Ceci est une démonstration très basique du système de containerisation d'un application Flask, contenant:
 - ```app.py```: Application Flask qui afffiche les infos d'un fichier uploadé.
 - ```deploy.yml```: Pipeline minimaliste pour déployer le container sur un serveur.
@@ -85,3 +83,7 @@ L'exécution est visible sur ```https://github.com/<github-pseudo>/<repo-name>/s
 ![pipeline](imgs/pipeline.png)
 
 Pour github, tous les fichiers ```.yml``` se trouvant dans ```.github/workflows/``` seront interprétés comme des pipelines.
+
+## Disclaimer
+
+Ceci est un exemple **très basique** qui a pour but de montrer la simplicité d'utilisation de l'écosystème Docker/Flask/Github, **ne pas utiliser** tel quel dans un **environement de production**.
