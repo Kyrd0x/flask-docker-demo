@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>File Infos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>File Infos</h2>
+    {% if file_info %}
+      <ul>
+        <li><strong>Name:</strong> {{ file_info.name }}</li>
+        <li><strong>Size:</strong> {{ file_info.size }} bytes</li>
+        <li><strong>Upload time:</strong> {{ file_info.time }}</li>
+      </ul>
+    {% else %}
+      <p>No file uploaded.</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}" class="btn">Back to Upload</a>
+  </div>
+</body>
+</html>

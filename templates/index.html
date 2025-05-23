@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload File</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Upload a File</h2>
+    <form method="post" enctype="multipart/form-data" action="{{ url_for('infos') }}">
+      <input type="file" name="file" required>
+      <button type="submit">Upload</button>
+    </form>
+
+    {% if file_info %}
+      <div class="file-info">
+        <h3>File Info</h3>
+        <ul>
+          <li><strong>Name:</strong> {{ file_info.name }}</li>
+          <li><strong>Size:</strong> {{ file_info.size }} bytes</li>
+          <li><strong>Upload time:</strong> {{ file_info.time }}</li>
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
