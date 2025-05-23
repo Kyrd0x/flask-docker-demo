@@ -1,5 +1,9 @@
 # Flask - Docker démo
 
+[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-3.1-lightgrey?logo=flask)](https://flask.palletsprojects.com/)
+[![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker)](https://www.docker.com/)
+
 ![app](imgs/app.png)  
 
 **Ceci est un exemple très basique de l'écosystème Docker/Flask/Github**
@@ -73,9 +77,11 @@ Le principe de cette Pipeline est le suivant:
 
 Dans les paramètres du projet github il faut définir 3 secrets: ```VPS_HOST```, ```VPS_USER``` et ```VPS_SSH_KEY``` dans le but de ne pas les exposer en clair dans la pipeline.
 
-Définir les secrets sur ```https://github.com/<github-pseudo>/<repo-name>/settings/secrets/actions```  
-L'exécution est visible sur ```https://github.com/<github-pseudo>/<repo-name>/settings/secrets/actions```.
-Ici: []()
+Définir les secrets sur ```https://github.com/<github-pseudo>/<repo-name>/settings/secrets/actions```
 
 
-Pour github, tous les fichiers ```.yml``` se trouvant dans ```.github/workflows/``` seront interprétés comme des pipeline
+L'exécution est visible sur ```https://github.com/<github-pseudo>/<repo-name>/settings/secrets/actions```
+
+![pipeline](imgs/pipeline.png)
+
+Pour github, tous les fichiers ```.yml``` se trouvant dans ```.github/workflows/``` seront interprétés comme des pipelines.

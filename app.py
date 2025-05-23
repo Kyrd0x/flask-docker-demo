@@ -4,6 +4,17 @@ import os
 
 app = Flask(__name__)
 
+"""
+Fichier principal de l'application Flask
+Il suffit de définir une fonction pour chaque route
+Et de lui mettre un décorateur @app.route (chemin, méthode, ...)
+
+Les fichiers HTML sont dans le dossier templates/
+Il peut contenir du code Python, mais il faut l'encadrer de {{ }} ou {% %}
+
+Le CSS et le JS sont dans le dossier static/
+"""
+
 # La route principale renvoie index.html
 @app.route("/", methods=["GET"])
 def index():
